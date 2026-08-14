@@ -1,0 +1,174 @@
+/* ==========================================================================
+   1. 変数定義 (CSS Variables) - カラー & テーマ設定
+   ========================================================================== */
+:root {
+  /* ライトモード (デフォルト) */
+  --bg-color: #fcfcfc;
+  --text-color: #24292e;
+  --heading-color: #0f172a;
+  --border-color: #e1e4e8;
+  --card-bg: #ffffff;
+  --header-footer-bg: rgba(255, 255, 255, 0.75);
+  
+  /* 固定カラー (未訪問/訪問済み共通) */
+  --link-color: #0178d4;
+
+  /* フォント定義 */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Cascadia Mono", "Cascadia Code", Consolas, "Courier New", monospace;
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0d1117;
+    --text-color: #c9d1d9;
+    --heading-color: #f0f6fc;
+    --border-color: #30363d;
+    --card-bg: #161b22;
+    --header-footer-bg: rgba(13, 17, 23, 0.75);
+  }
+}
+
+/* ==========================================================================
+   2. 基本スタイル & リセット
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* リンク色設定 (未訪問・訪問済みともに固定) */
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* コード・等幅フォント設定 */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+pre {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+code {
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 85%;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* ==========================================================================
+   3. ヘッダー (半透明 + ぼかし & レイアウト)
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background-color: var(--header-footer-bg);
+  -webkit-backdrop-filter: blur(12px); /* Safari対応 */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ヘッダー内の画像（ロゴなど）を左側に配置 */
+header img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* ヘッダー内のナビゲーションを右側に配置 */
+header nav {
+  margin-left: auto; /* 左側にマージンをとって右寄せを確実にする */
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. セクション スタイル
+   ========================================================================== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+section {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 少し浮き上がるホバーエフェクト（好みに合わせて） */
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+section h1, section h2, section h3 {
+  color: var(--heading-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   5. フッター (半透明 + ぼかし)
+   ========================================================================== */
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: var(--header-footer-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-color);
+}
