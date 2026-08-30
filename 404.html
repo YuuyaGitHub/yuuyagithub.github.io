@@ -2,11 +2,226 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>404 - ページが見つかりません</title>
-</head>
-<body>
-<h1>404</h1>
-<p>お探しのページは見つかりませんでした。</p>
-<a href="/">ホームに戻る</a>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Yuuyaのホームページ</title>
+    <style>
+      /* ==========================================================================
+         1. 変数定義 (CSS Variables) - カラー & テーマ設定
+         ========================================================================== */
+      :root {
+        /* ライトモード (デフォルト) */
+        --bg-color: #fcfcfc;
+        --text-color: #24292e;
+        --heading-color: #0f172a;
+        --border-color: #e1e4e8;
+        --card-bg: rgba(255, 255, 255, 0.85);
+        --card-border: rgba(225, 228, 232, 0.6);
+        --card-shadow: rgba(0, 0, 0, 0.08);
+        --subtext-color: #57606a;
+
+        /* 固定カラー */
+        --link-color: #0178d4;
+        --btn-bg: #0178d4;
+        --btn-text: #ffffff;
+        --btn-hover-bg: #005a9e;
+
+        /* フォント定義 */
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --font-mono: "Cascadia Mono", "Cascadia Code", Consolas, "Courier New", monospace;
+      }
+
+      /* ダークモード対応 */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #0d1117;
+          --text-color: #c9d1d9;
+          --heading-color: #f0f6fc;
+          --border-color: #30363d;
+          --card-bg: rgba(22, 27, 34, 0.85);
+          --card-border: rgba(48, 54, 61, 0.6);
+          --card-shadow: rgba(0, 0, 0, 0.3);
+          --subtext-color: #8b949e;
+
+          --btn-bg: #1f6feb;
+          --btn-text: #ffffff;
+          --btn-hover-bg: #388bfd;
+        }
+      }
+
+      /* ==========================================================================
+         2. 基本スタイル & リセット
+         ========================================================================== */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* 背景画像とぼかし処理 */
+      .bg-wallpaper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/assets/Wallpaper.png');
+        background-size: cover;
+        background-position: center;
+        filter: blur(16px);
+        transform: scale(1.08); /* ぼかしによる端の滲みを防ぐための拡大 */
+        z-index: -1;
+      }
+
+      /* リンク色設定 (未訪問・訪問済みともに固定) */
+      a, a:visited {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        opacity: 0.85;
+      }
+
+      /* コード・等幅フォント設定 */
+      code, pre, kbd, samp {
+        font-family: var(--font-mono);
+      }
+
+      /* ==========================================================================
+         3. コンテンツカード & レイアウト
+         ========================================================================== */
+      .container {
+        width: 90%;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem 2rem;
+        text-align: center;
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px var(--card-shadow);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      /* 404画像 (元サイズ 1041x626) */
+      .img-404 {
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+        aspect-ratio: 1041 / 626;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 1.5rem;
+      }
+
+      /* 説明文メッセージ */
+      .message {
+        font-size: 1.05rem;
+        color: var(--heading-color);
+        margin: 0 0 1.75rem 0;
+        font-weight: 500;
+        line-height: 1.7;
+      }
+
+      /* ボタンエリア */
+      .btn-container {
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-home {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        background-color: var(--btn-bg);
+        color: var(--btn-text) !important;
+        font-weight: 600;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+        text-decoration: none !important;
+      }
+
+      .btn-home:hover {
+        background-color: var(--btn-hover-bg);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+      }
+
+      .btn-home:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ランダムメッセージ */
+      .random-message {
+        font-size: 0.825rem;
+        color: var(--subtext-color);
+        margin: 0;
+        min-height: 1.2em; /* スクリプト読み込み前のガタつき防止 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 背景ぼかし画像 -->
+    <div class="bg-wallpaper"></div>
+
+    <main class="container">
+      <!-- 404画像 -->
+      <img src="/assets/img/404.png" alt="404 Not Found" class="img-404" width="1041" height="626">
+
+      <!-- メッセージ -->
+      <p class="message">
+        お探しのページは見つかりませんでした。<br>
+        ページが移動または削除された可能性があります。
+      </p>
+
+      <!-- ボタン -->
+      <div class="btn-container">
+        <a href="/" class="btn-home">ホームに戻る</a>
+      </div>
+
+      <!-- ランダムメッセージ (JavaScriptで動的表示) -->
+      <p class="random-message" id="randomMessage"></p>
+    </main>
+
+    <script>
+      (function() {
+        // ランダムメッセージ一覧
+        const messages = [
+          "迷子になった時は、一度最初に戻ってみるのも手です。",
+          "おや？ ここには何も無いようです...",
+          "URLに打ち間違いはありませんか？",
+          "探しものは何ですか？ 見つけにくいものですか？",
+          "このページは、次元の狭間に吸い込まれたのかもしれません。",
+          "ここはお探しの目的地ではないようです。"
+        ];
+
+        // ランダムに選出して表示
+        const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+        document.getElementById('randomMessage').textContent = randomMsg;
+      })();
+    </script>
+  </body>
 </html>
