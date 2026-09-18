@@ -9,17 +9,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>FAQ - Yuuyaのホームページ</title>
+  </head>
 <body>
-  <header>
-    <a href="/"><img src="/assets/Yuuya.png" / ></a>
-    <nav class="menu">
-      <ul>
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/about-me">自己紹介</a></li>
-        <li><a href="/minecraft">マイクラ</a></li>
-      </ul>
-    </nav>
-  </header>
+  {% include header.html %}
 <h1>FAQ</h1>
 <p>様々なFAQをまとめています。</p>
 <p>なお、このページは作成中です。<br>完成までお待ちください。</p>
@@ -35,7 +27,5 @@
   <p>Q2. 好きなものは何ですか<br>A2. PCやゲームなどが好きです。</p>
   <p>Q3. 生年月日はいつですか<br>A3. 2006年12月2日です。</p>
 </body>
-<footer>
-  <p>Copyright © 2020-2026 Yuuyaのホームページ</p>
-</footer>
+{% include footer.html %}
 </html>

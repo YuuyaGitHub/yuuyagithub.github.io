@@ -9,18 +9,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>自己紹介 - Yuuyaのホームページ</title>
-</head>
+  </head>
 <body>
-  <header>
-    <a href="/"><img src="/assets/Yuuya.png" / ></a>
-    <nav class="menu">
-      <ul>
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/about-me">自己紹介</a></li>
-        <li><a href="/minecraft">マイクラ</a></li>
-      </ul>
-    </nav>
-  </header>
+  {% include header.html %}
 <h1>自己紹介</h1>
 <h2 id="basic">基本</h2>
 <p>名前: Yuuya<br>住まい: 日本<br>生年月日: 2006年12月2日<br>​性別: 男<br>好きなこと: PC、ゲーム、YouTube、鉄道</p>
@@ -71,7 +62,5 @@
 <hr>
 <p>今後さらに追加される予定です</p>
 </body>
-<footer>
-  <p>Copyright © 2020-2026 Yuuyaのホームページ</p>
-</footer>
+{% include footer.html %}
 </html>

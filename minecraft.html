@@ -9,17 +9,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>マイクラ - Yuuyaのホームページ</title>
+  </head>
 <body>
-  <header>
-    <a href="/"><img src="/assets/Yuuya.png" / ></a>
-    <nav class="menu">
-      <ul>
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/about-me">自己紹介</a></li>
-        <li><a href="/minecraft">マイクラ</a></li>
-      </ul>
-    </nav>
-  </header>
+  {% include header.html %}
 <h1>マイクラ</h1>
 <p>ここではマイクラに関する様々なものを配布しています。</p>
 <h2 id="datapacks">データパック</h2>
@@ -47,7 +39,5 @@
     <li>このページおよびサブページの内容はMinecraft公式の製品ではありません。MojangまたはMicrosoftから承認を受けたものではなく、関連性もありません。</li>
   </ul>
 </body>
-<footer>
-  <p>Copyright © 2020-2026 Yuuyaのホームページ</p>
-</footer>
+{% include footer.html %}
 </html>

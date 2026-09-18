@@ -9,17 +9,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Wixからの移行 - Yuuyaのホームページ</title>
+  </head>
 <body>
-  <header>
-    <a href="/"><img src="/assets/Yuuya.png" / ></a>
-    <nav class="menu">
-      <ul>
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/about-me">自己紹介</a></li>
-        <li><a href="/minecraft">マイクラ</a></li>
-      </ul>
-    </nav>
-  </header>
+  {% include header.html %}
 <h1>Wixからの移行</h1>
 <p>Yuuyaのホームページは2020年の開設以降、Wixでホストされてきました。<br>しかし、2026年8月14日に旧サイトの<a href="https://yuuya20061202.wixsite.com/website/post/%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E7%A7%BB%E8%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" target="_blank">ブログ記事</a>にもある通り、将来的にGitHub Pagesへ完全移行されることを決定しました。<br>具体的な完全移行時期は未定ですが、2028年までに移行する予定としています。</p>
 <p>なお、Wixはエクスポートをサポートしない上に私にとってその必要性がないためサイトのコードはゼロから書かれています(内容をコピーしている個所はあります)。</p>
@@ -55,7 +47,5 @@
   <hr>
   <a href="/" title="トップへ戻る">トップへ戻る</a>
 </body>
-<footer>
-  <p>Copyright © 2020-2026 Yuuyaのホームページ</p>
-</footer>
+{% include footer.html %}
 </html>

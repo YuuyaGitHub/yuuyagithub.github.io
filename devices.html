@@ -9,17 +9,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>デバイス紹介 - Yuuyaのホームページ</title>
+  </head>
 <body>
-  <header>
-    <a href="/"><img src="/assets/Yuuya.png" / ></a>
-    <nav class="menu">
-      <ul>
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/about-me">自己紹介</a></li>
-        <li><a href="/minecraft">マイクラ</a></li>
-      </ul>
-    </nav>
-  </header>
+  {% include header.html %}
 <h1>デバイス紹介</h1>
 <p>これらページでは私が持っているデバイスを紹介しています。</p>
   <ul>
@@ -30,7 +22,5 @@
     <li><a href="/devices/storages" title="ストレージ">ストレージ</a></li>
   </ul>
 </body>
-<footer>
-  <p>Copyright © 2020-2026 Yuuyaのホームページ</p>
-</footer>
+{% include footer.html %}
 </html>
