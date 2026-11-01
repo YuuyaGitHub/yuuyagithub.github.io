@@ -1,0 +1,241 @@
+---
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Yuuya MOD - Yuuyaのホームページ">
+    <meta property="og:description" content="自作のMinecraft 1.12.2用の様々な要素を追加するMOD「Yuuya MOD」の配布ページです。">
+    <meta property="og:url" content="https://yuuyagithub.github.io">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Yuuya MOD - Yuuyaのホームページ</title>
+  </head>
+<body>
+  {% include header.html %}
+<h1>Yuuya MOD</h1>
+<p>
+  この「Yuuya MOD」と呼ばれるMODは、<a href="https://mcreator.net/" target="_blank">MCreator</a>で自作した様々な要素を追加するMODです。<br>
+  現在、v1およびv2を配布しています。<a href="#downloads">ページ下部</a>からダウンロードできます。
+</p>
+
+<h2 id="blocks">ブロック</h2>
+<h3 id="main-blocks">メインブロック</h3>
+<ul>
+  <li>Yuuyaブロック</li>
+  <li>Yuuyaのハーフブロック</li>
+  <li>Yuuyaのフェンス</li>
+  <li>Yuuyaの壁</li>
+  <li>Yuuya鉱石</li>
+</ul>
+<h3 id="lucky-blocks">ラッキーブロック</h3>
+<p>※v2にはありません。</p>
+<ul>
+  <li>ノーマル</li>
+  <li>超ラッキー</li>
+  <li>アンラッキー</li>
+</ul>
+<h3 id="decorations">装飾</h3>
+<ul>
+  <li>Yuuyaチェスト<br>どちらのバージョンでもバニラのチェストのようにアイテムを保管できますが、v2ではテクスチャが変更されており、開けた際に2%の確率でバニラの音が再生されます。</li>
+  <li>Yuuya鍛冶台<br>ダイヤモンド製ツールおよび弓をアップグレードすることが可能です。ただし、エンチャント等は失われます。</li>
+  <li>Yuuyaサボテン<br>乗るとダメージを受けます。アイテムを消滅させる効果はありません。</li>
+</ul>
+
+<h2 id="items">アイテム</h2>
+<ul>
+  <li>Yuuya</li>
+</ul>
+
+<h2 id="mobs">Mob</h2>
+<ul>
+  <li id="yuuya-boss">Yuuyaボス</li>
+  <p>召喚ブロックで召喚可能な非常に強力なボスMobです。ウィザスケ召喚・落雷・爆発などの挙動を行い、倒した際に大爆発します。エンドラやウィザーよりも強力です。フルダイヤ装備でダイヤモンドの剣を持っており、盾を構えています(ただし防御することはありません)。<br>
+エンダードラゴン、ウィザー、ウィザースケルトン、他のYuuyaボス、他MODのMob以外のすべてのMobに敵対します。<br>
+アイアンゴーレムもしくはスノウゴーレムの力で倒すことは非常に困難です。<br>
+Yuuya装備で戦闘するとダイヤ装備より圧倒的に楽なので、そちらで戦うことをおすすめします。</p>
+  <p>体力は 1024 (❤️ x 512) あります。</p>
+  <p>攻撃力は以下の通りです。<br>
+     イージー: 2 (❤️)<br>
+     ノーマル: 4 (❤️❤️) + 毒 5秒<br>
+     ハード: 7.5 (❤️ x 3.75) + 衰弱II 40秒、弱体化III 10秒、鈍化III 20秒、採掘速度低下III 10秒、盲目 20秒
+     </p>
+  <li id="yuuya-spider">Yuuyaクモ</li>
+    <p>現在のバージョンでは壁をよじ登ることはできませんが、将来のバージョンで改良される予定です。</p>
+  <li id="yuuya-ghast">Yuuyaガスト</li>
+    <p>近距離・遠距離から攻撃を行ってきます。倒すと小規模な爆発と共に白のコンクリートが生成されます。
+      雷に打たれると通常のガストに変身します。<br>また、右クリックすると複数のデバフが付与され動けなくなります。</p>
+  <li id="cursed-yuuya">呪われたYuuya</li>
+    <p>遠距離攻撃を行ってきます。<br>弓が効かないため、近接攻撃でのみ倒せます。その他のダメージも無効です。<br>
+  <li id="yuuya-creeper">Yuuyaクリーパー</li>
+    <p>現在のバージョンでは倒すと爆発しますが(Classic版のように)、将来的にはバニラのような挙動になる予定です。</p>
+  <li id="yuuya-zombie">Yuuyaゾンビ</li>
+    <p>振る舞いは通常のゾンビと変わりません。</p>
+  <li id="yuuya-chicken">Yuuyaニワトリ</li>
+    <p>卵を落とすことはありません。乗ることが可能で、馬のように上下左右に操作できます。<br>
+       以下のダメージに耐性があります: 炎、溺水、<s>爆発</s>、<s>ウィザー</s>、矢、稲妻、金床、落下、ポーション、サボテン</p>
+  <li id="yuuya-flying-mob">Yuuya浮遊Mob</li>
+    <p>飛行能力を持つMobで、友好的です。<br>Yuuyaニワトリと異なり横方向への移動は出来ず、ダメージの耐性もありません。</p>
+  <li id="hikakin">ヒカキン</li>
+    <p>敵対Mobであり、プレイヤー、村人、アイアンゴーレム、スノーゴーレムを攻撃します。
+       本物のヒカキンスキンと全く同じであり、ヴィンディケーターと全く同じサウンドを持っています。<br>
+       倒すとダイヤモンドをドロップします。</p>
+    <p>攻撃力(推測): 3 (❤️ x 1.5)<br>体力: 48 (❤️ x 24)</p>
+    <p>※v1にのみ存在します。</p>
+  <li id="kazu">カズ</li>
+  <p>カズさんと全く同じ見た目をしている友好的Mobです。<br>
+     乗ることが可能で、上下左右に操作できます。<br>
+     倒すとケーキをドロップします。</p>
+  <p>体力: 8 (❤️ x 4)</p>
+  <p>※v1にのみ存在します。</p>
+</ul>
+
+<h2 id="dimensions">ディメンション</h2>
+<img src="/assets/img/minecraft/mods/yuuya-mod/yuuya-dimension.png" width="480" height="270" alt="Yuuyaディメンション" title="Yuuyaディメンション">
+<ul>
+  <li id="yuuya-dimension">Yuuyaディメンション</li>
+  <p>
+    オレンジ色の空、土の地面、地上の地形生成が特徴のディメンションです。<br>基本的にはv1とv2共に同じですが、構造物やバイオームなどの点で少しの違いがあります。<br>
+    このディメンションは<a href="https://www.curseforge.com/minecraft/mc-mods/indev-hell" target="_blank">Indev Hell</a>というModのインスピレーションを受けています。
+  </p>
+</ul>
+<img src="/assets/img/minecraft/mods/yuuya-mod/yuuya-hell-dimension.png" width="480" height="270" alt="Yuuya地獄ディメンション" title="Yuuya地獄ディメンション">
+<ul>
+  <li id="yuuya-hell-dimension">Yuuya地獄ディメンション</li>
+  <p>
+    ネザーの地形生成が特徴のディメンションです。<br>v1とv2で大きな違いがあります。
+    <br>前者は石系のブロックで構成されており構造物なし、後者は赤色のコンクリートで構成されており構造物の追加、多数のMobがスポーンするなどが含まれています。<br>
+  </p>
+  </ul>
+<img src="/assets/img/minecraft/mods/yuuya-mod/yuuya-sky-dimension.png" width="480" height="270" alt="Yuuyaスカイディメンション" title="Yuuyaスカイディメンション">
+<ul>
+  <li id="yuuya-sky-dimension">Yuuyaスカイディメンション</li>
+  <p>
+    ジ・エンドの地形生成が特徴で、浮島のディメンションです。<br>
+    こちらもv1とv2で大きな違いがあり、前者は石系のブロックで構成されており構造物なしでエンダーマンのみスポーン、後者は赤色のコンクリートで構成されており構造物の追加、ウィザースケルトンのスポーンが含まれています。<br>
+  </p>
+</ul>
+<p>なお、これら3つのディメンションは「ベッドを使用すると爆発」「共通の構造物(v2のみ)」「環境光源が無効なため非常に暗い」という共通の特徴があります。</p>
+
+<h2 id="furniture">家具</h2>
+<ul>
+  <li id="tv">テレビ</li>
+  <p>右クリックで電源を入/切することができます。v1とv2で映像が異なります。</p>
+</ul>
+<ul>
+  <li id="computer">パソコン</li>
+  <p>ノートパソコンです。私のPCの画面を使用しています。<br>電源は常に入ったままで、オフにすることはできません。<br>v1ではモデルミスのため反対向きに配置されます。修正する方法はありません。v2では修正されています。</p>
+</ul>
+<ul>
+  <li id="refrigerator">冷蔵庫</li>
+  <p>食べ物を入れることができます。<small><small>ただし、<a href="https://yuuya-mod-dev.blogspot.com/2024/01/yuuya-refrigerator-item-restrictions.html" target="_blank">関係ないアイテムは入れないように</a>してください。</small></small><br>
+  理由は不明ですが、特定の方向に置くとヒットボックスがおかしくなります。</p>
+</ul>
+<ul>
+  <li id="chair">椅子</li>
+  <p>座ることはできません。</p>
+</ul>
+<ul>
+  <li id="table">テーブル</li>
+</ul>
+
+<h2 id="tools">ツール</h2>
+<ul>
+  <li id="yuuya-armor">Yuuya装備</li>
+  <p>v1およびv2のいずれでも1か所に装備すると防御力ゲージが最大になりますが、強くなってはいません。<br>v1では全身に装備すると大量のバフが付与されます。v2ではこれが見直され、効果量が減りブーツを装備すれば落下ダメージが無効になります。</p>
+  <li id="yuuya-tools">Yuuyaツール</li>
+  <p>ツルハシ、斧、シャベル、剣、クワのYuuya版です。<br>v2ではツルハシ、剣、クワに特殊な効果が追加されています。</p>
+  <li id="yuuya-gun">Yuuya銃</li>
+  <p>右クリックすると弓のような軌道で弾丸が飛んでいきます。v1/v2ともにMobに当たると爆発、v1では地面に当たることでも爆発します。<br>使用にはv1では通常の矢(効果付きの矢および光の矢は不可)、v2では専用の「Yuuya銃の弾」が必要となります。</p>
+</ul>
+
+<h2 id="foods-and-drinks">食べ物と飲み物</h2>
+<ul>
+  <li id="yuuya-meat">Yuuya肉</li>
+  <p>食べると満腹度が全回復(ゲージが空でも)します。隠し満腹度も非常に高いです。<br>
+    まずそうに見えますが、非常に美味しいです。</p>
+  <li id="golden-yuuya-meat">金のYuuyaの肉</li>
+  <p>満腹度や特徴はYuuya肉と全く同じですが、強くなります。<br>付与される効果はv1とv2でやや異なります。</p>
+  <li id="poisoned-yuuya-meat">毒入りのYuuya肉</li>
+  <p>食べると10秒間毒状態になります。回復量も少ないので食べるメリットはないです。<br>間違って食べないように気を付けてください！</p>
+  <li id="cop">コップ</li>
+  <p>水を飲むことができます。</p>
+</ul>
+
+<h2 id="commands">コマンド</h2>
+<ul>
+  <li id="yboss"><code>/yboss</code></li>
+  <p>Yuuyaボスを召喚します。</p>
+  <li id="yspider"><code>/yspider</code></li>
+  <p>クモの呪いを発生させます。<br>v1では代わりに<code>/yuuyamod</code>が同じ効果を持っています。</p>
+  <li id="yuuyamod"><code>/yuuyamod</code></li>
+  <p>v1ではクモの呪いの発生、v2ではYuuyaボスもしくはウィザーを召喚するだけのコマンドです。</p>
+  <li id="findyb"><code>/findyb</code></li>
+  <p>30秒間Yuuyaボスを発光させます。チートが無効でも実行可能です。</p>
+  <li id="yhelp"><code>/yhelp</code></li>
+  <p>Yuuya MODのコマンドのヘルプを表示します。</p>
+  <li id="currentlocation"><code>/currentlocation</code></li>
+  <p>現在の位置をチャットもしくはアクションバーに表示します。</p>
+</ul>
+
+<p>他にも要素があります。あなたの力で是非探してみてください！</p>
+<p>クラフトレシピはスクショが面倒なので用意しません。<br>別途JEIなどを導入し、レシピをご自身でご確認ください。</p>
+
+<h2 id="version">バージョン</h2>
+<p>対応するバージョンおよびMod Loaderは<b>1.12.2 Forge</b>のみです。<br>
+  1.16.5、1.20.1、1.21.11、26.3などの他バージョン、Fabric、NeoForgeなどの他Loaderには対応していません。対応予定もありません。</p>
+
+<h2 id="changelog">変更履歴</h2>
+<p>
+  <a href="/assets/docs/minecraft/mods/yuuya-mod/yuuya-mod-v1-changelog.txt" target="_blank">v1の変更履歴</a>
+  (<a href="/assets/docs/minecraft/mods/yuuya-mod/yuuya-mod-v1-changelog-original.txt" target="_blank">オリジナルスタイル</a>)<br>
+  <a href="https://yuuya-mod-dev.blogspot.com/search/label/%E6%9C%80%E6%96%B0%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3" target="_blank">v2 YMR1以降の変更履歴</a>
+</p>
+
+<h2 id="video">動画</h2>
+<p>以下はYuuya MOD v2の動画です。<br>(現在動画は非公開です)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gGyE0TLlOY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="downloads">ダウンロード</h2>
+<h3 id="curseforge">CurseForge</h3>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/yuuya-mod" target="_blank" title="CurseForge">CurseForge</a> (1.xのみ)</p>
+<h3 id="v1">v1</h3>
+<a href="https://drive.google.com/uc?export=download&id=1yjoeGkTT51agrafD5Sq2hzJHDNGRl_-o" target="_blank" title="v1.0">v1.0</a><br>
+<a href="https://drive.google.com/uc?export=download&id=1_-13J9UrlRctHGd3cpW5rC8tMnHPOA_1" target="_blank" title="v1.0.1">v1.0.1</a><br>
+<a href="https://drive.google.com/uc?export=download&id=1Bu0ZMeWlh1nDxK2Wx_LCPyRllNe99geI" target="_blank" title="v1.0.2">v1.0.2</a><br>
+<a href="https://drive.google.com/uc?export=download&id=1cTvn1-YNk-YZlYx5eKWz23oLonjf-k17" target="_blank" title="v1.1.0">v1.1.0</a><br>
+<a href="https://drive.google.com/uc?export=download&id=1BgNIxcwtAdVGvptVHrTbchASbFG6es0_" target="_blank" title="v1.2.0">v1.2.0</a><br>
+<a href="https://drive.google.com/uc?export=download&id=1gyOBKaU9t494SSA8myfP5Y6qux1zH-2k" target="_blank" title="v1.2.1">v1.2.1</a>
+<h3 id="v2">v2</h3>
+<p>
+  <a href="https://drive.google.com/uc?export=download&id=1pCPMg4ZisNpNKCgicGKRjU0z580mkY9u" target="_blank" title="v2.0">v2.0</a> (
+  <a href="https://drive.google.com/uc?export=download&id=1K1WWsejoxSE8eUvbcNbSY3uCMo1fAZ22/" target="_blank" title="Preview 1">Preview 1</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1AaEXyDX3Xyh85PZz8nV3MVxk3EOMLWaV" target="_blank" title="Preview 1.1">Preview 1.1</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1tSnKsF488VTPBbASGsvcbCwT5Xj5MacG" target="_blank" title="Preview 1.2a">Preview 1.2a</a>・
+  <a href="https://drive.google.com/uc?export=download&id=18MqPzAxEQ_n6G8_ptl2ZxKBG0wa57vW4" target="_blank" title="Preview 1.2b">Preview 1.2b</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1R48Eua9ypMHHScVUYDt9f9-6Pvh0eWR6" target="_blank" title="Preview 2">Preview 2</a>・
+  <a href="https://drive.google.com/uc?export=download&id=19Xr8Av4LL0LZ1pjTfikrKnvAQ8OFWwRg" target="_blank" title="Devsta-1">Devsta-1</a>・
+  <a href="https://drive.google.com/uc?export=download&id=105U6KIUeVVzvn1UrFhYXmDHarup6NSzA" target="_blank" title="Devsta-2">Devsta-2</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1cVZpx1qclEDNF5dZCqrMxhWG6eEa3Und" target="_blank" title="Devsta-3">Devsta-3</a>・
+  <a href="https://drive.google.com/uc?export=download&id=16xmMZlartFr9Y5u2XTjkq9x5rXGKsWTN" target="_blank" title="Devsta-4">Devsta-4</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1TIrQa3hLkDGZUsVVHySwxRWEQWE0FiPA" target="_blank" title="YMR1">YMR1</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1XUxRXB-i-BofWtvK6dAmP6I0CDGJDYPm" target="_blank" title="YMR2">YMR2</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1XpSRJISiQ18GGp_UP6LRXyLZKZrTu4Vb" target="_blank" title="YMR3">YMR3</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1YQKQSXcEDfoqQ9ebbGgaAy-x0yIoiQum" target="_blank" title="YMR4-b1">YMR4-b1</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1GXyxSOWeZMq_68Cof6mAl79_6WK5IKdk" target="_blank" title="YMR4-b2">YMR4-b2</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1Ta4GjwbUxyNlfVVQZs8tQKVNgttyZiyz" target="_blank" title="YMR4-b3">YMR4</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1wAhgqj7AkfA_8HGYxo5sY7QjFTpzPNP1" target="_blank" title="YMR4 Experimental">YMR4 Experimental</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1yIgZQNrcKI9hbADH0EDQTHYVOnXaPlnv" target="_blank" title="YMR5">YMR5</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1IxFMcX0Z0Egi1BXuGCYWlfXEt2oNqZxd" target="_blank" title="YMR6">YMR6</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1As8LHJTyRZnKxoQQQ19J1Dy0rtJ9cNRY" target="_blank" title="Pre-Release 1">Pre-Release 1</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1lfo0hFrf94XJ14RnFhmdFZlOHP30KvhT" target="_blank" title="Pre-Release 2">Pre-Release 2</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1szz1vEI4A2on3EvnIflTs-S-LrjIqriV" target="_blank" title="Pre-Release 3">Pre-Release 3</a>・
+  <a href="https://drive.google.com/uc?export=download&id=1iznuEf7sVeXc7jZiwgKtWxevoU_MTRGC" target="_blank" title="Release Candidate 1">Release Candidate 1</a>
+)<br>
+v2.1 ( YMR1・YMR2・Pre-Release 1・Release Candidate 1)</p>
+<hr>
+<center><a href="/minecraft" title="マイクラに戻る">マイクラに戻る</a></center>
+</body>
+{% include footer.html %}
+</html>
